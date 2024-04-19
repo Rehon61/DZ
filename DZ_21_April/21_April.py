@@ -3,12 +3,21 @@
 # который при вызове возвращает количество созданных объектов класса «Дробь».
 
 class Fraction:
+    count = 0  # Статическая переменная для отслеживания количества созданных объектов
+
     def __init__(self, numerator=0, denominator=1):
         self.numerator = numerator
         if denominator != 0:
             self.denominator = denominator
         else:
             raise ValueError("Знаменатель не может быть равен нулю")
+        Fraction.count += 1  # Увеличиваем счетчик при создании нового объекта
+
+    @staticmethod
+    def get_instance_count():
+        return Fraction.count
+
+    # Остальные методы...
 
     def input_fraction(self):
         self.numerator = int(input("Введите числитель: "))
@@ -41,6 +50,7 @@ class Fraction:
         result_denominator = self.denominator * other.numerator
         return Fraction(result_numerator, result_denominator)
 
+
 fraction1 = Fraction()
 fraction2 = Fraction()
 
@@ -67,6 +77,8 @@ product_fraction.output_fraction()
 quotient_fraction = fraction1.divide(fraction2)
 print("Частное дробей:")
 quotient_fraction.output_fraction()
+
+print("Количество созданных объектов класса Дробь:", Fraction.get_instance_count())
 
 
 
