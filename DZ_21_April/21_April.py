@@ -3,7 +3,7 @@
 # который при вызове возвращает количество созданных объектов класса «Дробь».
 
 class Fraction:
-    count = 0  # Статическая переменная для отслеживания количества созданных объектов
+    count = 0
 
     def __init__(self, numerator=0, denominator=1):
         self.numerator = numerator
@@ -17,7 +17,7 @@ class Fraction:
     def get_instance_count():
         return Fraction.count
 
-    # Остальные методы...
+
 
     def input_fraction(self):
         self.numerator = int(input("Введите числитель: "))
