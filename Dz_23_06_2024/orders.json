@@ -1,0 +1,893 @@
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": []
+        }
+    ],
+    "payment_method": "\u043d\u0430\u043b\u0438\u0447\u043d\u044b\u0435"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                        "price": 0.1
+                    },
+                    "price": 30
+                },
+                {
+                    "ingredient": {
+                        "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                        "price": 0.1
+                    },
+                    "price": 25
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                },
+                {
+                    "ingredient": {
+                        "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                        "price": 0.1
+                    },
+                    "price": 30
+                },
+                {
+                    "ingredient": {
+                        "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                        "price": 0.1
+                    },
+                    "price": 25
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                },
+                {
+                    "ingredient": {
+                        "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                        "price": 0.1
+                    },
+                    "price": 30
+                },
+                {
+                    "ingredient": {
+                        "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                        "price": 0.1
+                    },
+                    "price": 25
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                },
+                {
+                    "ingredient": {
+                        "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                        "price": 0.1
+                    },
+                    "price": 30
+                },
+                {
+                    "ingredient": {
+                        "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                        "price": 0.1
+                    },
+                    "price": 25
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u041a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "ingredient": {
+                        "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                        "price": 0.2
+                    },
+                    "price": 50
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043d\u0430\u043b\u0438\u0447\u043d\u044b\u0435"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": []
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        },
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "1"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
+{
+    "hotdogs": [
+        {
+            "base_price": 3.0,
+            "ingredients": [
+                {
+                    "name": "\u041c\u0430\u0439\u043e\u043d\u0435\u0437",
+                    "price": 0.2
+                },
+                {
+                    "name": "\u0413\u043e\u0440\u0447\u0438\u0446\u0430",
+                    "price": 0.1
+                },
+                {
+                    "name": "\u041a\u0435\u0442\u0447\u0443\u043f",
+                    "price": 0.1
+                }
+            ]
+        }
+    ],
+    "payment_method": "\u043a\u0430\u0440\u0442\u0430"
+}
