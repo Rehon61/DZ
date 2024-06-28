@@ -9,7 +9,7 @@ def receive_file(host, port):
         with conn:
             filename = conn.recv(1024).decode()
             print(f"Получено уведомление о файле: {filename}")
-            # Запрос подтверждения у пользователя
+
             user_confirmation = input(f"Принять файл {filename}? (да/нет): ").lower()
             if user_confirmation == "да":
                 conn.sendall("READY".encode())
