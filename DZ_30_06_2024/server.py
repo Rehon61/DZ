@@ -1,7 +1,7 @@
 import socket
 import os
 
-# Функция для отправки файла
+
 def send_file(conn, filename, client_sender):
     with open(filename, 'rb') as file:
         conn.sendfile(file, 0)
@@ -21,17 +21,17 @@ while True:
     conn, addr = server_socket.accept()
     print(f"Подключен клиент: {addr}")
 
-    # Получение имени файла
+
     filename = conn.recv(1024).decode()
     print(f"Запрошен файл: {filename}")
 
-    # Проверка существования файла
+
     if not os.path.isfile(filename):
         conn.send("Файл не найден.".encode())
         conn.close()
         continue
 
-    # Ожидание подтверждения от получателя
+
     conn.send("Готов к передаче файла. Отправьте 'yes' для подтверждения.".encode())
     confirmation = conn.recv(1024).decode()
 

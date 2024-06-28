@@ -27,6 +27,6 @@ def receive_file(host, port):
                 print("Получение файла отменено.")
 
 if __name__ == "__main__":
-    host = 'localhost'  # IP-адрес сервера
-    port = 65432        # Порт, который использует сервер
+    host = 'localhost'
+    port = 65432
     receive_file(host, port)
