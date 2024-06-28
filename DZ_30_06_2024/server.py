@@ -8,7 +8,7 @@ def send_file(conn, filename, client_sender):
     print("Файл успешно отправлен.")
     client_sender.send("Файл успешно доставлен получателю.".encode())
 
-# Настройка сервера
+
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = '127.0.0.1'
 port = 12345
