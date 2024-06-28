@@ -184,7 +184,7 @@
 # search_and_merge(src_directory, search_word, output_file)
 # remove_forbidden_words(output_file, forbidden_words_file)
 #
-# # Вывод статистики
+#
 # print(f'Файлы, содержащие слово "{search_word}", были найдены и объединены в файл "{output_file}".')
 # print(f'Запрещенные слова были удалены из файла "{output_file}".')
 

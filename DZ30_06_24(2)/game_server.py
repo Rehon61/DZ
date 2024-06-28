@@ -59,18 +59,23 @@ def client_thread(conn, player):
     finally:
         conn.close()
 
-# Настройка сервера
+# Настройка сервера с обработкой исключений и закрытием сокета
 def setup_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(('localhost', 5555))
-    server.listen(2)
-    print("Сервер игры запущен и ожидает подключения игроков...")
-    while len(players) < 2:
-        conn, addr = server.accept()
-        print(f"Подключение от {addr}")
-        player_id = len(players) + 1
-        players[player_id] = conn
-        threading.Thread(target=client_thread, args=(conn, player_id)).start()
+    try:
+        server.bind(('localhost', 5555))
+        server.listen(2)
+        print("Сервер игры запущен и ожидает подключения игроков...")
+        while len(players) < 2:
+            conn, addr = server.accept()
+            print(f"Подключение от {addr}")
+            player_id = len(players) + 1
+            players[player_id] = conn
+            threading.Thread(target=client_thread, args=(conn, player_id)).start()
+    except Exception as e:
+        print(f"Ошибка при настройке сервера: {e}")
+    finally:
+        server.close()
 
 # Запуск сервера
 if __name__ == "__main__":
