@@ -1,82 +1,93 @@
 import socket
 import threading
 
-# Инициализация игрового поля
-game_board = [" " for _ in range(9)]
-players = {}
-player_turn = 1
-game_active = True
-lock = threading.Lock()
+class TicTacToeGame:
+    def __init__(self):
+        self.board = [' ' for _ in range(9)]
+        self.current_winner = None
 
-# Функция для вывода игрового поля в консоль
-def print_board(board):
-    print(f"{board[0]}|{board[1]}|{board[2]}")
-    print("-+-+-")
-    print(f"{board[3]}|{board[4]}|{board[5]}")
-    print("-+-+-")
-    print(f"{board[6]}|{board[7]}|{board[8]}")
+    def print_board(self):
+        for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
+            print('| ' + ' | '.join(row) + ' |')
 
-# Функция для проверки победителя
-def check_winner(board, mark):
-    win_conditions = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
-                      (0, 3, 6), (1, 4, 7), (2, 5, 8),
-                      (0, 4, 8), (2, 4, 6)]
-    for condition in win_conditions:
-        if board[condition[0]] == board[condition[1]] == board[condition[2]] == mark:
+    def available_moves(self):
+        return [i for i, spot in enumerate(self.board) if spot == ' ']
+
+    def make_move(self, square, letter):
+        if self.board[square] == ' ':
+            self.board[square] = letter
+            if self.check_winner(square, letter):
+                self.current_winner = letter
             return True
-    return False
+        return False
 
-# Функция для отправки сообщений всем клиентам
-def broadcast(message):
-    for player_conn in players.values():
-        player_conn.sendall(message.encode())
+    def check_winner(self, square, letter):
+        row_ind = square // 3
+        row = self.board[row_ind*3:(row_ind+1)*3]
+        if all([spot == letter for spot in row]):
+            return True
+        col_ind = square % 3
+        column = [self.board[col_ind+i*3] for i in range(3)]
+        if all([spot == letter for spot in column]):
+            return True
+        if square % 2 == 0:
+            diagonal1 = [self.board[i] for i in [0, 4, 8]]
+            if all([spot == letter for spot in diagonal1]):
+                return True
+            diagonal2 = [self.board[i] for i in [2, 4, 6]]
+            if all([spot == letter for spot in diagonal2]):
+                return True
+        return False
 
-# Функция потока клиента
-def client_thread(conn, player):
-    global game_board, player_turn, game_active
-    conn.sendall(f"PLAYER {player}".encode())
-    try:
-        while game_active:
-            with lock:
-                if player == player_turn:
-                    conn.sendall("YOUR MOVE".encode())
-                    data = conn.recv(1024).decode()
-                    move = int(data) - 1
-                    if 0 <= move < 9 and game_board[move] == " ":
-                        game_board[move] = "X" if player == 1 else "O"
-                        print_board(game_board)
-                        broadcast(f"MOVE {move + 1} by PLAYER {player}")
-                        if check_winner(game_board, game_board[move]):
-                            broadcast("WIN")
-                            game_active = False
-                        player_turn = 2 if player == 1 else 1
+def handle_client(conn, addr, game, opponent_conn):
+    connected = True
+    while connected:
+        try:
+            move = conn.recv(1024).decode('utf-8')
+            if move == 'q':
+                connected = False
+                opponent_conn.sendall(f"Player {addr} has quit the game. You win!".encode('utf-8'))
+            else:
+                square = int(move)
+                letter = 'X' if addr == player1_addr else 'O'
+                if game.make_move(square, letter):
+                    game.print_board()
+                    if game.current_winner:
+                        conn.sendall("You win! Game over.".encode('utf-8'))
+                        opponent_conn.sendall(f"Player {letter} wins! Game over.".encode('utf-8'))
+                        connected = False
+                        server.sendall("Game over. The server will now close.".encode('utf-8'))
+                        server.close()
                     else:
-                        conn.sendall("INVALID MOVE".encode())
+                        opponent_conn.sendall(f"Player {letter} made a move to square {square}".encode('utf-8'))
                 else:
-                    conn.sendall("WAIT".encode())
-    except Exception as e:
-        print(f"Ошибка: {e}")
-    finally:
-        conn.close()
+                    conn.sendall("Invalid move. Try again.".encode('utf-8'))
+        except ConnectionAbortedError:
+            print(f"Соединение с {addr} было неожиданно прервано.")
+            connected = False
+        except Exception as e:
+            print(f"Произошла ошибка: {e}")
+            connected = False
 
-# Настройка сервера с обработкой исключений и закрытием сокета
-def setup_server():
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    try:
-        server.bind(('localhost', 5555))
-        server.listen(2)
-        print("Сервер игры запущен и ожидает подключения игроков...")
-        while len(players) < 2:
-            conn, addr = server.accept()
-            print(f"Подключение от {addr}")
-            player_id = len(players) + 1
-            players[player_id] = conn
-            threading.Thread(target=client_thread, args=(conn, player_id)).start()
-    except Exception as e:
-        print(f"Ошибка при настройке сервера: {e}")
-    finally:
-        server.close()
+    conn.close()
+    if opponent_conn:
+        opponent_conn.close()
 
-# Запуск сервера
-if __name__ == "__main__":
-    setup_server()
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind(('localhost', 5555))
+server.listen()
+
+game = TicTacToeGame()
+player1_conn, player1_addr = server.accept()
+player2_conn, player2_addr = server.accept()
+
+player1_thread = threading.Thread(target=handle_client, args=(player1_conn, player1_addr, game, player2_conn))
+player2_thread = threading.Thread(target=handle_client, args=(player2_conn, player2_addr, game, player1_conn))
+player1_thread.start()
+player2_thread.start()
+
+player1_thread.join()
+player2_thread.join()
+
+server.close()
+

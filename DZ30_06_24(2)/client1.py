@@ -1,48 +1,26 @@
 import socket
 
-# Конфигурация клиента
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = 'localhost'  # Или IP-адрес сервера, если он запущен на другом компьютере
-port = 12345  # Убедитесь, что порт соответствует порту сервера
+class TicTacToeClient:
+    def __init__(self, address, port):
+        self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.client.connect((address, port))
 
-try:
-    client.connect((host, port))
-except ConnectionRefusedError:
-    print("Не удалось подключиться к серверу. Проверьте, что сервер запущен и доступен.")
-    exit(1)
+    def send_move(self, move):
+        self.client.sendall(str(move).encode('utf-8'))
 
-def main():
-    while True:
-        try:
-            # Получение сообщения от сервера
-            message = client.recv(1024).decode('utf-8')
-        except Exception as e:
-            print(f"Произошла ошибка при получении данных: {e}")
-            continue
+    def receive_response(self):
+        return self.client.recv(1024).decode('utf-8')
 
-        if "WELCOME" in message:
-            print("Добро пожаловать в игру крестики-нолики!")
-        elif "GAME" in message:
-            print(message)
-        elif "YOUR MOVE" in message:
-            print("Ваш ход. Введите координаты (например, '1 1'): ")
-            move = input()
-            client.send(move.encode('utf-8'))
-        elif "INVALID MOVE" in message:
-            print("Некорректный ход. Попробуйте снова.")
-        elif "VICTORY" in message:
-            print("Поздравляем! Вы выиграли!")
-            break
-        elif "DEFEAT" in message:
-            print("К сожалению, вы проиграли.")
-            break
-        elif "DRAW" in message:
-            print("Игра закончилась вничью.")
-            break
-        elif "Неизвестная команда" in message:
-            pass  # Просто игнорируем и не выводим ничего
-        else:
-            print(f"Получено сообщение: {message}")
+client = TicTacToeClient('localhost', 5555)
 
-if __name__ == "__main__":
-    main()
+game_over = False
+while not game_over:
+    move = input("Введите номер клетки (0-8) или 'q' для выхода: ")
+    if move == 'q':
+        game_over = True
+    else:
+        client.send_move(move)
+        response = client.receive_response()
+        print(response)
+
+client.client.close()
